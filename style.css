@@ -1,0 +1,535 @@
+body {
+	font-family:  "Roboto", sans-serif;
+	background-color: #eee9da;
+	margin: 24px auto;
+	padding: 0;
+	box-shadow: 0 12px 50px -11px rgba(0, 0, 0, 0.2);
+	border-radius: 8px;
+}
+
+
+.child1 td  {
+	width: 3px;
+	right: auto;
+align-items: end;
+}
+
+
+
+h2 {
+background-color: rgb(2, 58, 148);
+color: whitesmoke ;
+text-align: center;
+}
+
+
+header {
+	background-color: #6096B4;
+	color: #fff;
+	padding: 20px;
+}
+
+nav ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: flex-start;
+
+}
+
+input[type=search]{
+	width: 350px;
+	font-size: 18px;
+	display: flex;
+	justify-content: flex-end;}
+
+
+
+
+nav ul li {
+	margin: 0 10px;
+}
+
+nav ul li a {
+	color: #000;
+	text-decoration: none;
+}
+
+main {
+	padding: 20px;
+}
+
+h1 {
+	font-size: 2em;
+	text-align: center;
+}
+
+button {
+	background: #e63946;
+	color: #fff;
+	border: none;
+	padding: 8px 32px;
+	border-radius: 8px;
+	font-size: 18px;
+	font-weight: 900;
+	cursor: pointer;
+	margin: 24px 0;
+}
+
+ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+ul li {
+	background-color: #fff;
+	padding: 10px;
+	margin: 10px;
+	box-shadow: 0px 2px 4px rgba(0,0,0,0.2);
+}
+
+.parent {
+	border: 1px solid black;
+	margin: 1rem;
+	padding: 2rem 2rem;
+	text-align: center;
+	float:left;
+	width: 50%;
+
+  }
+  .child1{
+	display: inline-block;
+	border: 2px solid black;
+	padding: -1rem ;
+	vertical-align: top;
+	align-self: left;
+	width: 30%;
+  }
+
+  .newLoan{
+	display: inline-block;
+	border: 2px solid black;
+	padding: -1rem ;
+	vertical-align: top;
+	align-self: left;
+	width: 25%;
+  }
+
+  .benetobwr{
+	display: inline-block;
+	border: 2px solid black;
+	padding: -1rem ;
+	vertical-align: top;
+	align-self: left;
+	width: 44%;
+  }
+  .ConsumerDebt1{
+	display: inline-block;
+	border: 3px solid black;
+	padding: -1rem ;
+	vertical-align: top;
+	align-self: left;
+	text-align: center;
+	width: 62%;
+  }
+ 
+
+  .otherFees{
+	display: inline-block;
+	border: 3px solid black;
+	padding: -1rem ;
+	vertical-align: top;
+	align-self: left;
+	width: 35%;
+}
+
+
+
+  .pricingSection{
+	display: inline-block;
+	border: 3px solid black;
+	padding: -1rem ;
+	vertical-align: top;
+	align-self: center;
+	text-align: center;
+	width: 100%;
+  }
+
+
+  
+
+
+
+
+
+  .col-md-12 {
+	display: inline-block;
+	border: 1px solid black;
+	padding: 1rem rem;
+	vertical-align: middle;
+  } 
+
+
+
+  .savings {
+	display: inline-block;
+	vertical-align: center;
+	text-align: center;
+	align-self: left;
+	width: 70%;
+  }
+
+  .dti {
+	display: inline-block;
+	vertical-align: top;
+	text-align: center;
+	align-self: center;
+	width: 29%;
+  }
+
+ 
+
+
+
+  tr {
+	border: 1px solid black;
+	background-color: lightblue;
+	padding: 1rem 2rem;
+	vertical-align: top;
+	text-align: center;
+	align-self: center;
+  }
+
+
+
+
+
+
+
+  .loan-calculator {
+	font-family: "Roboto", sans-serif;
+	width: 600px;
+	margin: 24px auto;
+	background: #fff;
+	box-shadow: 0 12px 50px -11px rgba(0, 0, 0, 0.2);
+	border-radius: 8px;
+	color: #14213d;
+	overflow: hidden;
+  }
+  
+  .loan-calculator,
+  .loan-calculator * {
+	box-sizing: border-box;
+  }
+  
+  .loan-calculator .top {
+	background: #14213d;
+	color: #fff;
+	padding: 32px;
+  }
+  
+  .loan-calculator .top h2 {
+	margin-top: 0;
+  }
+  
+  .loan-calculator form {
+	display: flex;
+	gap: 40px;
+	justify-content: space-between;
+  }
+  
+  .loan-calculator .title {
+	margin-bottom: 16px;
+  }
+  
+  .loan-calculator form input {
+	font-size: 20px;
+	padding: 8px 24px;
+	width: 100%;
+  }
+
+  .loan-calculator .form-control{
+	font-size: 20px;
+	padding: 8px 24px;
+	width: 175%;
+
+
+
+
+
+
+  }
+
+  
+  
+  .loan-calculator .result {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+  }
+  
+  .loan-calculator .result .left {
+	width: 100%;
+	padding: 8px 32px;
+  }
+  
+  .loan-calculator .left h3 {
+	font-size: 16px;
+	font-weight: 400;
+	margin-bottom: 8px;
+  }
+  
+  .loan-calculator .result .value {
+	font-size: 30px;
+	font-weight: 900;
+	padding-bottom: 10px;
+	border-bottom: 1px solid rgba(20, 33, 61, 0.2);
+  }
+  
+  .loan-calculator .result .value::before {
+	content: "$";
+	font-size: 24px;
+	font-weight: 400;
+	margin-right: 6px;
+	opacity: 0.4;
+  }
+  
+  .loan-calculator .calculate-btn {
+	background: #e63946;
+	color: #fff;
+	border: none;
+	padding: 8px 32px;
+	border-radius: 8px;
+	font-size: 18px;
+	font-weight: 900;
+	cursor: pointer;
+	margin: 24px 0;
+  }
+  
+  .loan-calculator .right {
+	width: 75%;
+  }
+  
+  @media (max-width: 650px) {
+	.loan-calculator {
+	  width: 90%;
+	  max-width: 500px;
+	}
+  
+	.loan-calculator form {
+	  flex-direction: column;
+	  gap: 20px;
+	}
+  
+	.loan-calculator .result {
+	  flex-direction: column;
+	  text-align: center;
+	}
+
+
+
+
+
+
+
+
+	.center {
+		font-size: 1px;
+		width: 100%;
+		padding: 8px 32px;
+	  }
+	  
+	.center h4 {
+		font-size: 1px;
+		font-weight: 400;
+		margin-bottom: 8px;}
+	
+	
+	
+	}
+
+
+
+
+
+
+
+
+
+	* {
+		box-sizing: border-box;
+	  }
+	  
+	  body1 {
+		font-family: Arial, Helvetica, sans-serif;
+	  }
+	  
+	  /* Style the header */
+	  .header1 {
+		grid-area: header;
+		background-color: #f1f1f1;
+		padding: 30px;
+		text-align: center;
+		font-size: 35px;
+	  }
+	  
+	  /* The grid container */
+	  .grid-container {
+		display: grid;
+		grid-template-areas: 
+		  'header header header header header header' 
+		  'left1 left1 middle1 middle1 right1 right1' 
+		  'left2 left2 middle2 middle2 right2 right2' 
+		  'footer footer footer footer footer footer';
+		/* grid-column-gap: 10px; - if you want gap between the columns */
+	  } 
+	  
+	  .left1,
+	  .middle1,
+	  .right1 {
+		padding: 10px;
+		height: 300px; /* Should be removed. Only for demonstration */
+	  }
+	  
+	  /* Style the left column */
+	  .left1 {
+		grid-area: left;
+	  }
+	  
+	  /* Style the middle column */
+	  .middle1 {
+		grid-area: middle;
+	  }
+	  
+	  /* Style the right column */
+	  .right1 {
+		grid-area: right;
+	  }
+	  
+
+
+	  .left2,
+	  .middle2,
+	  .right2 {
+		padding: 10px;
+		height: 300px; /* Should be removed. Only for demonstration */
+	  }
+	  
+	  /* Style the left column */
+	  .left2 {
+		grid-area: left;
+	  }
+	  
+	  /* Style the middle column */
+	  .middle2 {
+		grid-area: middle;
+	  }
+	  
+	  /* Style the right column */
+	  .right2 {
+		grid-area: right;
+	  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	  /* Style the footer */
+	  .footer {
+		grid-area: footer;
+		background-color: #f1f1f1;
+		padding: 10px;
+		text-align: center;
+	  }
+	  
+	  /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+	  @media (max-width: 600px) {
+		.grid-container  {
+		  grid-template-areas: 
+			'header header header header header header' 
+			'left left left left left left' 
+			'middle middle middle middle middle middle' 
+			'right right right right right right' 
+			'footer footer footer footer footer footer';
+		}
+	  }
+
+
+
+
+	  footer {
+		font-size: 2em;
+		text-align: center;
+		font-size: 16px;
+	}
+
+
+
+
+	#comments-section {
+        padding: 10px;
+        margin: 10px;
+        max-width: 500px;
+        min-height: 100px;
+      }
+
+	  .notes{
+		display: inline-block;
+		border: 1px solid black;
+		padding: 2rem 30rem;
+		vertical-align: top;
+		align-self: center;
+	
+	  }
+
+
+
+
+
+	  .row {
+		display: flex;
+		margin-left:-5px;
+		margin-right:-5px;
+	  }
+	  
+	  .column {
+		flex: 50%;
+		padding: 5px;
+	  }
+	  
+	  table {
+		border-collapse: collapse;
+		border-spacing: 0;
+		width: 100%;
+		border: 1px solid #ddd;
+	  }
+	  
+	  th, td {
+		text-align: center;
+		padding: 3px;
+	  }
+
+
+	  .paymentTable, td{
+		text-align: left;
+		padding: 3px;
+
+	  }
+
+	  input[type=checkbox] {
+		transform: scale(1.5);
+	}
+	  
