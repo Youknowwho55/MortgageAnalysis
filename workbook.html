@@ -6,6 +6,7 @@
   <title>Mortgage Analysis Tool</title>
   <link rel="stylesheet" type="text/css" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
  </head>
 
  <header class="header">
@@ -18,7 +19,6 @@
         <h3>Show/Hide Sidebar</h3>
       </div>
       </li>
-
 
 
 
@@ -39,10 +39,12 @@
     <h3>Last, First</h3>
     <h4>Loan #</h4>
     <ul>
-      <li><a href="html.html">Borrower Info</a></li>
+      <li><a href="borrowerInfo.html">Borrower Info</a></li>
       <li><a href="workbook.html">Workbook</a></li>
       <li><a href="beneMaker.html">Benefit Maker</a></li>
       <li><a href="beneMaker.html">QM/HCT</a></li>
+      <li><a href="loanSummary.html">Loan Summary</a></li>
+
     </ul>
   
 
@@ -135,8 +137,6 @@
     
   <h1>Mortgage Analysis Tool</h1>
   <!-- <button class="addNew-btn">Add Worksheet</button>-->
-<div>Property Type, Occupancy, Loan Type, Loan Zip code, Term, Cash out, r/t, purchase</div>
-
 
 
 
@@ -167,42 +167,42 @@
 </div>
 
 
-  <!-- DEBT TO INCOME -->
-    <div class="dti">
-      <h2>Debt to Income</h2>
-      <div class="form-group">
-        <label for="frontRatio">Front End Ratio:</label>
-        <input type="text" class="form-control" id="frontRatio" ng-model="frontRatio" disabled>
-      </div>
-      <div class="form-group">
-        <label for="backRatio">Back End Ratio:</label>
-        <input type="text" class="form-control" id="backRatio" ng-model="backRatio" disabled>
-      </div>
-    </div>
-  
 
+<div class="loanInformation">
+  <h2>Loan Information </h2>
+  <table id="loanInformation">
+    <tr>
+      <th>Property Type</th>
+      <th>Occupancy</th>
+      <th>Loan Type</th>
+      <th>Term</th>
+    </tr>
+    <tr>
+      <td><input type="number" name="PropertyType" id="PropertyType"></td>
+      <td><input type="number" name="Occupancy" id="Occupancy"></td>
+      <td><input type="number" name="LoanType" id="LoanType"></td>
+      <td><input type="number" name="newTerm" id="newTerm"></td>
+    </tr>
+  <tr>   
+    <th>Loan Zip code</th>
+    <th>Purpose</th>
+    <th>Appraisal Waiver</th></tr>
+  <tr>
+    <td><input type="number" name="ZipCode" id="ZipCode"></td>
+    <td><input type="number" name="loanPurpose" id="loanPurpose"></td>
+    <td><input type="checkbox" name="appraisalWaiver" id="appraisalWaiver"></td>
+  </tr>
+    
+  </table>
+  </div>
      
 
 
 
 
   <!-- Payoffs and Payments section -->
-  <div class='child1'>
-    <div>
-        <h2>Income</h2>
-        <table id="incomeBorrow">
-            <tr>
-                <th>Borrower's Monthly Income</th>
-                <th>Co-Borrower's Monthly Income</th>
-            </tr>
-            <tr>
-              <td><input type="number" name="borrowersIncome" id="borrowersIncome"></td>
-              <td><input type="number" name="coborrowersIncome" id="coborrowersIncome"></td>
-            </table>
-        
-        </div>
-        
 
+<div class="PayoffsandPayments">
     <h2>Payoffs and Payments</h2>
     <table id="paymentTable">
       <tr>
@@ -210,27 +210,44 @@
         <th>Loan Balance</th>
         <th>Payment</th>
         <th>Sub</th>
+        <th>Term</th>
+        <th>Rate</th>
       </tr>
       <tr>
         <td>1st</td>
         <td><input type="number" name="loanBalance1" id="loanBalance1"></td>
         <td><input type="number" name="payment1" id="payment1"></td>
         <td><input type="checkbox" name="sub1" id="sub1"></td>
+        <td><input type="number" name="oldTerm1" id="oldTerm1"></td>
+        <td><input type="number" name="oldRate1" id="oldRate1"></td>
+
       </tr>
       <tr>
         <td>2nd</td>
         <td><input type="number" name="loanBalance2" id="loanBalance2"></td>
         <td><input type="number" name="payment2" id="payment2"></td>
         <td><input type="checkbox" name="sub2" id="sub2"></td>
+        <td><input type="number" name="oldTerm1" id="oldTerm2"></td>
+        <td><input type="number" name="oldRate1" id="oldRate2"></td>
       </tr>
       <tr>
         <td>3rd</td>
         <td><input type="number" name="loanBalance3" id="loanBalance3"></td>
         <td><input type="number" name="payment3" id="payment3"></td>
         <td><input type="checkbox" name="sub3" id="sub3"></td>
+        <td><input type="number" name="oldTerm1" id="oldTerm3"></td>
+        <td><input type="number" name="oldRate1" id="oldRate3"></td>
+        
       </tr>
     </table>
 
+<table>
+  <tr>
+ <td>Tax Inc?:  <input type="checkbox" name="oldTaxIncluded" id="oldTaxIncluded"></td> 
+ <td>Ins Inc?:  <input type="checkbox" name="oldInsIncluded" id="oldInsIncluded"></td> 
+</tr>
+
+</table>
 
   </div>
   
@@ -239,13 +256,13 @@
   <!-- New Loan sections -->
     <div class='newLoan'>
       <h2>New Loan</h2>
-      <form>
-<table>
-  <th>LTV</th>
-  <th>CLTV</th>
+    <form>
+      <table>
+      <th>LTV</th>
+      <th>CLTV</th>
 <tr>
-<td><input type="number" value="0"></td>
-<td><input type="number" value="0"></td>
+<td><input type="number" value="0" id="LTVvalue" readonly></td>
+<td><input type="number" value="0" id="CLTVvalue" readonly></td>
 </tr>
 </table>
 
@@ -264,27 +281,26 @@
           </tr>
 
     
+
           <tr>
-            <td><label><b>Base Loan Amount:</b></label></td>
+            <td><label for="baseLoanAmount"><b>Base Loan Amount:</b></label></td>
             <td><input type="number" name="baseLoanAmount" id="baseLoanAmount"></td>
           </tr>
           <tr>
-            <td><label>Subordinated:</label></td>
-            <td><input type="number" name="subordinated" id="subordinated"></td>
+            <td><label for="subordinatedAmount">Subordinated:</label></td>
+            <td><input type="number" name="subordinated" id="subordinatedAmount"></td>
           </tr>
           <tr>
-            <td><label>FF/UMIP:</label></td>
-            <td><input type="number" name="ffUmip" id="ffUmip">%</td>
-            <td COLSPAN="2">$</td>
-
+            <td><label for="ffUmip">FF/UMIP:</label></td>
+            <td><input type="number" name="ffUmip" id="ffUmip">%$</td>
           </tr>
           <tr>
-            <td><label>UMIP Refund:</label></td>
+            <td><label for="umipRefund">UMIP Refund:</label></td>
             <td><input type="number" name="umipRefund" id="umipRefund"></td>
           </tr>
           <tr>
-            <td><label><b>Total Loan Amount:</b></label></td>
-            <td><input type="number" name="totalLoanAmount" id="totalLoanAmount" value="123456"></td>
+            <td><label for="totalLoanAmount">Total Loan Amount:</label></td>
+            <td><input type="text" name="totalLoanAmount" id="totalLoanAmount" readonly></td>
           </tr>
           <tr>
             <td><label>Note Rate:</label></td>
@@ -375,7 +391,7 @@
     <table>
       <tr>
         <td><label>3rd Party Fee:</label></td>
-        <td><input type="number" name="thirdParty" value="123456"></td>
+        <td><input type="number" name="thirdPartyFees" value="123456"></td>
       </tr>
       <tr>
         <td><label>Appraisal Fee:</label></td>
@@ -403,7 +419,7 @@
       </tr>
       <tr>
         <td><label>Cash Out(Bring to Close):</label></td>
-        <td><input type="number" name="cashOut"></td>
+        <td><input type="number" name="cashOutAmount"></td>
       </tr>
     </table>
   </div>
@@ -548,43 +564,43 @@
       </tr>
       <tr>
         <td><input type="text"></td>
-        <td><input type="number" name="noteRate1"></td>
-        <td><input type="number" name="ysp1"></td>
-        <td><input type="number" value="123456"></td>
-        <td><input type="number" name="bd1"></td>
-        <td><input type="number"></td>
-        <td><input type="checkbox" name="select1"></td>
+        <td><input type="number" name="noteRate1" id="noteRate1"></td>
+        <td><input type="number" name="ysp1" id="ysp1"></td>
+        <td><input type="number" value="123456" name="yspDollar" id="yspDollar1"></td>
+        <td><input type="number" name="bd1" id="bd1"></td>
+        <td><input type="number" name="bdDollar" id="bdDollar1"></td>
+        <td><input type="checkbox" name="selectRate1"></td>
       </tr>
       <td><input type="text"></td>
-      <td><input type="number" name="noteRate1"></td>
-      <td><input type="number" name="ysp1"></td>
-      <td><input type="number"></td>
-      <td><input type="number" name="bd1"></td>
-      <td><input type="number"></td>
-      <td><input type="checkbox" name="select1"></td>
+      <td><input type="number" name="noteRate1" id="noteRate2"></td>
+      <td><input type="number" name="ysp1" id="ysp2"></td>
+      <td><input type="number" value="123456" name="yspDollar" id="yspDollar2"></td>
+      <td><input type="number" name="bd1" id="bd2"></td>
+      <td><input type="number" name="bdDollar" id="bdDollar2"></td>
+      <td><input type="checkbox" name="selectRate2"></td>
     </tr>
     <td><input type="text"></td>
-    <td><input type="number" name="noteRate1"></td>
-    <td><input type="number" name="ysp1"></td>
-    <td><input type="number"></td>
-    <td><input type="number" name="bd1"></td>
-    <td><input type="number"></td>
-    <td><input type="checkbox" name="select1"></td>
+    <td><input type="number" name="noteRate1" id="noteRate3"></td>
+    <td><input type="number" name="ysp1" id="ysp3"></td>
+    <td><input type="number" value="123456" name="yspDollar" id="yspDollar3"></td>
+    <td><input type="number" name="bd1" id="bd3"></td>
+    <td><input type="number" name="bdDollar" id="bdDollar3"></td>
+    <td><input type="checkbox" name="selectRate3"></td>
   </tr>
   <td><input type="text"></td>
-  <td><input type="number" name="noteRate1"></td>
-  <td><input type="number" name="ysp1"></td>
-  <td><input type="number"></td>
-  <td><input type="number" name="bd1"></td>
-  <td><input type="number"></td>
-  <td><input type="checkbox" name="select1"></td>
+  <td><input type="number" name="noteRate1" id="noteRate3"></td>
+  <td><input type="number" name="ysp1" id="ysp3"></td>
+  <td><input type="number" value="123456" name="yspDollar" id="yspDollar3"></td>
+  <td><input type="number" name="bd1" id="bd3"></td>
+  <td><input type="number" name="bdDollar" id="bdDollar3"></td>
+  <td><input type="checkbox" name="selectRate3"></td>
 </tr>
     </table>
 </div>
 
 
-<div>
-<table id="Target Fees">
+<div class="TargetFees">
+<table id="TargetFees">
   <tr>
 <td>Target:<input type="number" id="targetFees"></td>
 <td>Admin:<input type="number" id="adminFees" value="895"></td>
@@ -597,29 +613,50 @@
 <td>Gross Earnings:<input type="number" id="grossEarnings"></td>
 <td>Tax Service:<input type="number" id="taxService" value="88"></td>
 </table>
+</div>
+
+
+
+
+<!-- DEBT TO INCOME -->
+  <div class="INcomeSection">
+    <h2>Debt to Income</h2>
+    <div class="form-group">
+      <label for="frontRatio">Front End Ratio:</label>
+      <input type="text" class="form-control" id="frontRatio" ng-model="frontRatio" disabled>
+    </div>
+    <div class="form-group">
+      <label for="backRatio">Back End Ratio:</label>
+      <input type="text" class="form-control" id="backRatio" ng-model="backRatio" disabled>
+    </div>
+
+
+
+    <div>
+      <h2>Income</h2>
+      <table id="incomeBorrow">
+          <tr>
+              <th>Borrower's Monthly Income</th>
+              <th>Co-Borrower's Monthly Income</th>
+          </tr>
+          <tr>
+            <td><input type="number" name="borrowersIncome" id="borrowersIncome"></td>
+            <td><input type="number" name="coborrowersIncome" id="coborrowersIncome"></td>
+          </table>
+      
+      </div>
+  </div>
+
+
+
+
   </div>
   
 <div class="titleFees" id="titleFees">
 <h3>Title Fees</h3>
 
 
-
-
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -632,13 +669,14 @@
     <img src="posedonmtg.png" width="250" height="100">
     <p>&copy; 2023 Poseidons Mortgage Team United</p>
 </footer>
-
 <script src="https://cdn.jsdelivr.net/npm/chart.js@3.6.2/dist/chart.min.js"></script>
-  
 <script src="main.js"></script>
+<script src="workbook.js"></script>
 
-
+ </body>
 </html>
+
+
 
 
           

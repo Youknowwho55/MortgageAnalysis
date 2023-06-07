@@ -8,6 +8,15 @@ body {
 }
 
 
+#totalLoanAmount{
+	background-color: lightgrey;
+	width: 100px;
+}
+
+
+
+
+
 .child1 td  {
 	width: 3px;
 	right: auto;
@@ -26,15 +35,18 @@ text-align: center;
 header {
 	background-color: #6096B4;
 	color: #fff;
-	padding: 20px;
+	padding: 10px;
 }
+
+
+
 
 nav ul {
 	list-style: none;
 	margin: 0;
-	padding: 0;
+	padding: 10px;
 	display: flex;
-	justify-content: flex-start;
+	justify-content: center;
 
 }
 
@@ -63,6 +75,7 @@ main {
 h1 {
 	font-size: 2em;
 	text-align: center;
+	color: black;
 }
 
 button {
@@ -105,7 +118,7 @@ ul li {
 	padding: -1rem ;
 	vertical-align: top;
 	align-self: left;
-	width: 30%;
+	width: 37%;
   }
 
   .newLoan{
@@ -114,7 +127,7 @@ ul li {
 	padding: -1rem ;
 	vertical-align: top;
 	align-self: left;
-	width: 25%;
+	width: 22%;
   }
 
   .benetobwr{
@@ -123,7 +136,7 @@ ul li {
 	padding: -1rem ;
 	vertical-align: top;
 	align-self: left;
-	width: 44%;
+	width: 38%;
   }
   .ConsumerDebt1{
 	display: inline-block;
@@ -132,7 +145,7 @@ ul li {
 	vertical-align: top;
 	align-self: left;
 	text-align: center;
-	width: 62%;
+	width: 74%;
   }
  
 
@@ -142,8 +155,19 @@ ul li {
 	padding: -1rem ;
 	vertical-align: top;
 	align-self: left;
-	width: 35%;
+	width: 25%;
 }
+
+
+.PayoffsandPayments{
+	display: inline-block;
+	border: 3px solid black;
+	padding: -1rem ;
+	vertical-align: top;
+	align-self: left;
+	width: 40%;
+}
+
 
 
 
@@ -154,12 +178,26 @@ ul li {
 	vertical-align: top;
 	align-self: center;
 	text-align: center;
-	width: 100%;
+	width: 60%;
   }
 
-
+  .TargetFees{
+	display: inline-block;
+	border: 2px solid black;
+	padding: -1rem ;
+	vertical-align: top;
+	align-self: left;
+	width: 30%;
+  }
   
-
+  .loanInformation{
+	display: inline-block;
+	border: 2px solid black;
+	padding: -1rem ;
+	vertical-align: top;
+	align-self: left;
+	width: 40%;
+  }
 
 
 
@@ -178,7 +216,7 @@ ul li {
 	vertical-align: center;
 	text-align: center;
 	align-self: left;
-	width: 70%;
+	width: 95%;
   }
 
   .dti {
@@ -334,7 +372,6 @@ ul li {
 
 
 
-
 	.center {
 		font-size: 1px;
 		width: 100%;
@@ -360,6 +397,7 @@ ul li {
 
 	* {
 		box-sizing: border-box;
+
 	  }
 	  
 	  body1 {
@@ -488,11 +526,9 @@ ul li {
 
 	  .notes{
 		display: inline-block;
-		border: 1px solid black;
-		padding: 2rem 30rem;
 		vertical-align: top;
 		align-self: center;
-	
+		width: 400px;
 	  }
 
 
@@ -520,6 +556,7 @@ ul li {
 	  th, td {
 		text-align: center;
 		padding: 3px;
+		
 	  }
 
 
@@ -532,4 +569,201 @@ ul li {
 	  input[type=checkbox] {
 		transform: scale(1.5);
 	}
+	  
+	input[type=number] {
+	width: 110px;	
+	float:inline-start;
+
+}
+	  
+
+
+	  
+
+
+	  .boxLeft {
+		display: inline-block;
+		height: 50px;
+		background-color: rgb(2, 58, 148);
+		color: #fff;
+		text-align: right;
+		line-height: 10px;
+		cursor: pointer;
+	  }
+	  .sidebarLeft {
+		width: 200px;
+		height: 100vh;
+		background-color: #f0f0f0;
+		position: fixed;
+		left: -400px;
+		top: 0;
+		z-index: 999;
+		transition: left 0.3s ease-in-out;
+		padding-left: 10px;
+
+	  }
+	  
+	  .sidebarLeft.show {
+		left: 12px;
+	  }
+	  
+	  .contentLeft {
+		margin-left: 0;
+		transition: margin-left 0.3s ease-in-out;
+	  }
+	  
+	  .contentLeft.show-sidebarLeft {
+		margin-left: 200px;
+	  }
+
+
+	  .sidebarLeft .sub-menu {
+		display: none;
+		background-color: #fff;
+		position: absolute;
+		top: 0;
+		left: 100%;
+	  }
+	  
+	  .sidebarLeft li:hover .sub-menu {
+		display: block;
+	  }
+
+
+
+	  
+	  a {
+		display: block;
+		color: #992828;
+		text-decoration: none;
+	  }
+	  
+	  a:hover {
+		background-color: #999999;
+	  }
+	  
+
+
+	  .boxMiddle {
+		display: inline-block;
+		background-color: rgb(2, 58, 148);
+		color: #fff;
+		text-align: center;
+		cursor: pointer;
+		line-height: 50px;
+
+	  }
+
+	  .boxMiddle li {
+		list-style: none;
+	  }
+	  
+	  .boxMiddle a {
+		text-decoration: none;
+		color: white;
+		font-weight: bold;
+	  }
+	  
+	  .boxMiddle i {
+		margin-right: 5px;
+	  }
+
+
+
+	  header ul li a {
+		display: inline-block;
+		height: 50px;
+		background-color: rgb(2, 58, 148);
+		color: #fff;
+		text-align: center;
+		cursor: pointer;
+		vertical-align: center;
+	}
+
+
+
+	 
+
+	  .boxRight {
+		display: inline-block;
+		height: 50px;
+		background-color: rgb(2, 58, 148);
+		color: #fff;
+		text-align: left;
+		line-height: 10px;
+		cursor: pointer;
+	  }
+	  .sidebarRight {
+		width: 420px;
+		height: 100vh;
+		background-color: #f0f0f0;
+		position: fixed;
+		left: 3000px;
+		top: 0;
+		z-index: 999;
+		transition: right 0.3s ease-in-out;
+		padding-left: 10px;
+
+	  }
+	  
+	  .sidebarRight.show {
+		left: 1050px;
+	  }
+	  
+	  .contentRight {
+		margin-right: 0;
+		transition: margin-right 0.3s ease-in-out;
+	  }
+	  
+	  .contentRight.show-sidebarRight {
+		margin-right: 200px;
+	  }
+
+
+
+
+
+
+	  .dropdown {
+		position: relative;
+	  }
+	  
+	  .dropdown a {
+		display: block;
+		padding: 10px;
+		color: #333;
+		text-decoration: none;
+	  }
+	  
+	  .dropdown ul {
+		position: absolute;
+		top: 0;
+		left: 100%;
+		background-color: #fff;
+		border: 1px solid #ccc;
+		border-top: none;
+		min-width: 200px;
+		z-index: 1;
+		display: none;
+	  }
+	  
+	  .dropdown:hover ul {
+		display: block;
+	  }
+	  
+	  .dropdown li {
+		margin: 0;
+	  }
+	  
+	  .dropdown-menu li a {
+		display: block;
+		padding: 10px;
+		color: #333;
+		text-decoration: none;
+	  }
+	  
+	  .dropdown-menu li a:hover {
+		background-color: #f0f0f0;
+	  }
+
 	  

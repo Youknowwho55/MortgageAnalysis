@@ -1,13 +1,3 @@
-console.log('Welcome to the CRM!');
-
-let buttons = document.querySelectorAll('button');
-buttons.forEach(button => {
-	button.addEventListener('click', function() {
-		console.log('You clicked the ' + button.innerText + ' button.');
-	});
-});
-
-
 
 
 const loanAmountInput = document.querySelector(".loan-amount");
@@ -173,3 +163,19 @@ function addComment() {
   // Clear the input field
   document.getElementById("comment").value = "";
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -5,19 +5,137 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Benefit Maker</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="https://fontawesome.com/icons/right-from-bracket?f=classic&s=solid">
+  <script src="https://kit.fontawesome.com/4ed6e61daf.js" crossorigin="anonymous"></script>
   </head>
 <body>
-	<header>
-		<nav>
-			<ul>
-				<li><a href="html.html">Home</a></li>
-				<li><a href="index.html">Workbook</a></li>
-				<li><a href="beneMaker.html">Benefit Maker</a></li>
-			</ul>
-		</nav> 
-	</header>
-	
+  <header class="header">
+    <nav>
+      <ul>
+          <li><a href="html.html"><h3><i class="fa fa-home"></i>Home</h3></a></li>
+        </div>
+        <li>  
+          <div class="boxLeft" id="sidebar-toggleLeft">
+          <h3>Show/Hide Sidebar</h3>
+        </div>
+        </li>
+  
+  
+  
+  <li>
+    <div class="boxRight" id="sidebar-toggleRight">
+    <h3>Show/Hide Comments</h3>
+  </div></li>
+      </ul>
+    </nav>
+   </header>
+  
+  
+  
+  
+   <body>
+  
+    <div class="sidebarLeft">
+      <h3>Last, First</h3>
+      <h4>Loan #</h4>
+      <ul>
+        <li><a href="borrowerInfo.html">Borrower Info</a></li>
+        <li><a href="workbook.html">Workbook</a></li>
+        <li><a href="beneMaker.html">Benefit Maker</a></li>
+        <li><a href="beneMaker.html">QM/HCT</a></li>
+        <li><a href="loanSummary.html">Loan Summary</a></li>
+  
+      </ul>
+    
+  
+      <div class = "tools">
+      <h3>Tools</h3>
+     
+      <li class="dropdown">
+        <a href="#">PDF</a>
+        <ul class="dropdown-menu">
+          <li><a href="https://selling-guide.fanniemae.com">Waiting Periods</a></li>
+      <li><a href="https://www.hud.gov/sites/dfiles/OCHCO/documents/4000.1hsgh-011823.pdf">Mtg Lates</a></li>
+      <li><a href="https://selling-guide.fanniemae.com">Appraisal Products</a></li>
+      <li><a href="https://selling-guide.fanniemae.com">Manual Underwrite</a></li>
+      <li><a href="https://selling-guide.fanniemae.com">Seasoning</a></li>
+    </ul>
+  
+  
+      <li class="dropdown">
+        <a href="#">CNV</a>
+        <ul class="dropdown-menu">
+      <li><a href="https://selling-guide.fanniemae.com">FNMA Selling guide</a></li>
+      <li><a href="https://guide.freddiemac.com">FHLMC Selling guide</a></li>
+      <li><a href="https://www.fhfa.gov/DataTools/Downloads/Documents/Conforming-Loan-Limit/FullCountyLoanLimitList2023_HERA-BASED_FINAL_FLAT.pdf">Loan limit(2023)</a></li>
+      <li>Loan limit</li>
+    </ul>
+  
+  
+        <li class="dropdown">
+          <a href="#">FHA</a>
+          <ul class="dropdown-menu">
+        <li><a href="https://www.hud.gov/sites/dfiles/OCHCO/documents/4000.1hsgh-011823.pdf">FHA Selling Guide</a></li>
+        <li><a href="https://selling-guide.fanniemae.com">FHA Loan Limit (2023)</a></li>
+      </ul>
+  
+  
+        <li class="dropdown">
+          <a href="#">VA</a>
+          <ul class="dropdown-menu">
+        <li><a href="https://www.hud.gov/sites/dfiles/OCHCO/documents/4000.1hsgh-011823.pdf">VA Selling Guide</a></li>
+        <li><a href="https://selling-guide.fanniemae.com">VA Appraisal</a></li>
+        <li><a href="https://selling-guide.fanniemae.com">Residual Income Calc</a></li>
+      </ul>
+  
+      </ul>
+    </div>
+  
+    </div>
+    
+    
+  
+  
+    
+    <div class="sidebarRight">
+      <div class="notes">
+        <h2>Comments Section</h2>
+      <form>
+        <label for="comment">Add a comment:</label>
+        <input type="text" id="comment" name="comment">
+        <button type="button" onclick="addComment()">Add Comment</button>
+      </form>
+      <div id="comments-section">
+        <h2>Comments:</h2>
+        <ul id="comments-list"></ul>
+      </div>
+    </div>
+    
+    </div>
+    
+    
+    <script>
+      const sidebarToggleLeft = document.getElementById('sidebar-toggleLeft');
+      const sidebarLeft = document.querySelector('.sidebarLeft');
+  
+      sidebarToggleLeft.addEventListener('click', () => {
+        sidebarLeft.classList.toggle('show');
+      });
+  
+      const sidebarToggleRight = document.getElementById('sidebar-toggleRight');
+      const sidebarRight = document.querySelector('.sidebarRight');
+  
+      sidebarToggleRight.addEventListener('click', () => {
+        sidebarRight.classList.toggle('show');
+      });
+  
+  
+  
+  
+    </script>
+  
 
 
       <!-- CALCULATOR 1              -->
@@ -154,17 +272,6 @@
       </div>
 
 </div>
-
-
-
-
-
-
-
-
-
-
-
 
 
 
